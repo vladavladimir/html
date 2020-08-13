@@ -1,0 +1,65 @@
+$font-family:"Times New Roman";
+$color:azure;
+@import "helpers/_mixins.scss";
+
+
+.html{
+  height: 100%;
+}
+
+.title{
+
+  font-family:$font-family;
+}
+
+.header{
+  @extend .title;
+  font-size: 65px + 65px;
+  color:$color ;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+}
+.nav{
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: aqua;
+  #button{
+  @include button;
+  }
+  #button:hover{
+    background-color: $color;
+    color: white;
+  }
+}
+
+.footer{
+  position: fixed;
+  text-align: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: gray;
+  color: black;
+
+}
+.txt{
+  @extend .title;
+  text-align: center;
+  background-color: antiquewhite;
+  #naslov{
+    font-size: 30px + 45px;
+    color: royalblue;
+  }
+  #ulepsavanje{
+    @include ulepsavanje;
+    @extend .title;
+    font-weight: bold;
+    font-style: italic;
+  }
+}
+
